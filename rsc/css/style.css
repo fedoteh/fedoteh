@@ -6,7 +6,8 @@ body {
     padding: 0;
     width: 100%;
     font-size: 16px;
-    background-color: #ededed;
+    background-color: #f0ffff;
+    position: relative;
 }
 
 h1 {
@@ -20,6 +21,13 @@ h2 {
   font-size: 1.25rem;
   font-family: Pacifico;
   margin: 0;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-family: 'Roboto Slab';
+  white-space: nowrap;
+  font-weight: 500;
 }
 
 p {
@@ -37,23 +45,21 @@ aside, aside p {
 
 header {
   position: fixed;
+  margin-top: 0;
   z-index: 10;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: #f0f8ff;
 }
 
-header .content {
+header .banner-content {
   display: flex;
   align-items: center;
   padding: .5rem 3%;
+  justify-content: space-between;
 }
 
-.logo {
-  flex: 2 1 220px;
-}
-
-nav.desktop {
+nav .desktop {
   display: flex;
 }
 
@@ -74,6 +80,7 @@ nav.desktop a {
   line-height: 1.6;
   font-size: 0.875rem;
   color: #4a4a4a;
+  text-decoration: none;
 }
 
 
@@ -90,20 +97,201 @@ nav.desktop a {
     display: none;
   }
 
-
   nav.mobile {
     display: flex;
+    padding-right: 7.5%;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .logo h2 {
-    display: none;
+    display: none;   
+  }
+  
+  nav.mobile {
+    padding: 0;
   }
 }
 
 /* Main Section*/
 
 main {
+  display: flex;
   position: relative;
+  flex-wrap: wrap;
+  top: 80px;
+  width: 100%;
+  background-color: #ededed;
+  justify-content: center;
+}
+
+section {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  background-color: #f0ffff;
+  padding: 1.2rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+section ul {
+  padding: 0 1rem;
+  line-height: 1.75rem;
+}
+
+section ul li{
+  font-size: 0.875rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#about article {
+  width: 90%;
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 5px;
+}
+
+#experience article, #education article {
+  width: 90%;
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 5px;
+}
+
+/* Frost effect
+  border-radius: 8px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0,25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+*/
+
+article h1 {
+  font-size: 1.2rem;
+}
+
+.content h1{
+  padding-bottom: 10px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, rgb(0, 0, 0) , #ededed 50%) 1; 
+}
+
+.content h3 {
+  margin-top: 0;
+}
+
+.content h3.title {
+
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.content h3.company {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+}
+
+article p {
+  font-size: 0.8rem;
+}
+
+article * {
+  padding: 0 1%;
+}
+
+#about { 
+  background-image: url('../img/ba_landspace_2.JPG');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;  
+  border-radius: 5px;
+}
+
+#fewwords {
+  flex: 1; 
+}
+
+#description {
+  flex: 1; 
+}
+
+#experience, #education {
+  background-color: #ededed;
+}
+
+#experience ul li {
+  line-height: 1.2rem;
+  list-style-type: circle;
+  margin-left: 1%;
+
+}
+
+#projects {
+  display: flex;
+  width: 100%;
+  background-color: rgb(56, 56, 56);
+  padding: 0;
+  color: white;
+  margin-bottom: 3%;
+}
+
+#projects article{
+  display: flex;
+  width: 100%;
+  justify-items: center;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 425px) {
+  section {
+    /* width: auto; */
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  section {
+    width: 100%;
+    flex-wrap: wrap;
+  }  
+  
+  #about { 
+    background-image: url('../img/ba_landspace_2.JPG');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+
+  }
+
+  #about p {
+    min-width: 300px;
+  }  
+}
+
+/* Footer Section */
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+
+footer p {
+  display: inline-flex;
+  justify-items: flex-end;
 }
