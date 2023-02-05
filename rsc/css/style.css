@@ -6,8 +6,9 @@ body {
     padding: 0;
     width: 100%;
     font-size: 16px;
-    background-color: #f0ffff;
-    position: relative;
+    position: relative;  
+    background-color: #ededed;
+    
 }
 
 h1 {
@@ -15,12 +16,14 @@ h1 {
   font-family: 'Roboto Slab';
   white-space: nowrap;
   margin: 0;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.25rem;
-  font-family: Pacifico;
+  font-family: 'Roboto Slab';;
   margin: 0;
+  text-align: center;
 }
 
 h3 {
@@ -43,6 +46,8 @@ aside, aside p {
 /* Header Section */
 
 header {
+  display: flex;
+  justify-content: center;
   position: fixed;
   margin-top: 0;
   z-index: 10;
@@ -51,11 +56,27 @@ header {
   background-color: #f0f8ff;
 }
 
-header .banner-content {
+.content {
   display: flex;
   align-items: center;
   padding: .5rem 3%;
   justify-content: space-between;
+  width: 80%;
+
+}
+
+
+#hoverlogo {
+  display: none;
+}
+
+.top-logo:hover #hoverlogo {
+  display: inline;
+  z-index: 10;
+}
+
+.top-logo:hover #logo {
+  display: none;
 }
 
 nav .desktop {
@@ -75,11 +96,15 @@ nav.desktop ul {
 }
 
 nav.desktop a {
-  vertical-align: bottom;
-  line-height: 1.6;
   font-size: 0.875rem;
   color: #4a4a4a;
   text-decoration: none;
+  height: 100%;
+  
+}
+
+nav.desktop a:hover {
+  color: black;
 }
 
 
@@ -89,6 +114,8 @@ nav.desktop a {
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   font-size: 12px;
+  height: 100%;
+  
 }
 
 @media only screen and (max-width: 800px) {
@@ -114,24 +141,22 @@ nav.desktop a {
 
 /* Main Section*/
 
-main {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
+main {  
+  position: relative;  
   top: 80px;
-  width: 100%;
-  background-color: #ededed;
-  justify-content: center;
+  width: 75%;
+  margin: auto;
 }
 
 section {
   justify-content: center;
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 100%;
   background-color: #f0ffff;
   padding: 1.2rem 1.2rem;
-  margin-bottom: 1rem;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 section ul {
@@ -144,18 +169,17 @@ section ul li{
   font-family: 'Open Sans', sans-serif;
 }
 
-#about article {
-  width: 90%;
-  padding: 15px;
-  border-radius: 8px;
-  backdrop-filter: blur(20px);
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin: 5px;
+article h3 {
+  font-size: 1.2rem;
 }
 
-#experience article, #education article {
+article p {
+  font-size: 0.8rem;
+}
+
+
+.intro article {
+ 
   width: 90%;
   padding: 15px;
   border-radius: 8px;
@@ -174,41 +198,7 @@ section ul li{
   border: 1px solid rgba(255, 255, 255, 0.3);
 */
 
-article h1 {
-  font-size: 1.2rem;
-}
-
-.content h1{
-  padding-bottom: 10px;
-  margin-bottom: 35px;
-  border-bottom: 1px solid;
-  border-image: linear-gradient(90deg, rgb(0, 0, 0) , #ededed 50%) 1; 
-}
-
-.content h3 {
-  margin-top: 0;
-}
-
-.content h3.title {
-
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-.content h3.company {
-  font-size: 0.9rem;
-  color: #4a4a4a;
-}
-
-article p {
-  font-size: 0.8rem;
-}
-
-article * {
-  padding: 0 1%;
-}
-
-#about { 
+.intro { 
   background-image: url('../img/ba_landspace_2.JPG');
   background-position: top;
   background-size: cover;
@@ -224,32 +214,39 @@ article * {
   flex: 1; 
 }
 
-#experience, #education {
-  background-color: #ededed;
-}
-
-#experience ul li {
-  line-height: 1.2rem;
-  list-style-type: circle;
-  margin-left: 1%;
-
-}
-
-#projects {
-  display: flex;
-  width: 100%;
-  background-color: rgb(56, 56, 56);
-  padding: 0;
+#projects, #hobbies {
+  background-color: red;
   color: white;
   margin-bottom: 3%;
+  display: block;
 }
 
-#projects article{
-  display: flex;
-  width: 100%;
-  justify-items: center;
-  justify-content: center;
+#projects h2 {  
+  margin-bottom: 20px;
+  text-align: start;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around
+}
+
+.item {
+  display: flex;
+  width: 200px;
+  min-height: 200px;
+  max-height: 300px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+.item img{
+  width: 100%;
+}
+
 
 
 @media only screen and (max-width: 425px) {
@@ -260,20 +257,11 @@ article * {
 
 @media only screen and (max-width: 640px) {
   section {
-    width: 100%;
+    /* width: 100%; */
     flex-wrap: wrap;
   }  
   
-  #about { 
-    /* background-image: url('../img/ba_landspace_2.JPG'); */
-    /* background-position: top; */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-color: rgba(255, 255, 255, 0.5); */
-
-  }
-
-  #about p {
+  .intro {
     min-width: 300px;
   }  
 }
@@ -285,12 +273,39 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 60px;
   justify-content: center;
-  background-color: black;
+  background-color: #202124;
+  color: white;
+  align-items:center;
+  /* border-top: solid 4px #202124; */
+  border-top: solid 2px;
+ 
+  border-image: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(32,33,36,1) 50%, rgb(0, 0, 0) 100%) 1 ;
+
+}
+
+
+footer span {
+  font-family: Spectral;
+  color: lightgray;
+  cursor: default;
+  user-select: none;
+}
+
+
+/* Easter egg section*/
+footer #hellofriend {
+  display: none;
+}
+
+#easter-egg:hover #hellofriend {
+  display: inline;
+  z-index: 10;
+  text-decoration: none;
   color: white;
 }
 
-footer p {
-  display: inline-flex;
-  justify-items: flex-end;
+#easter-egg:hover #fsociety {
+  display: none;
 }
