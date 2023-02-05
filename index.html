@@ -10,6 +10,7 @@
   <link href="./rsc/css/style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./rsc/font/MR ROBOT.ttf">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&family=Roboto+Slab&family=Spectral:ital@0;1&display=swap" rel="stylesheet">
   <link rel="icon" type="image" href="./rsc/img/logo.svg">
 </head>
@@ -36,8 +37,14 @@
   </header>
   
   <main>
-    <h1>Federico Benavidez's Portfolio</h1>
-    <h2>Fullstack Engineering | DevOps enthusiast | IT Specialist</h2>
+    <div class="overlay">
+      <div class="banner">
+        <div class="text-wrapper">
+          <h1>Federico Benavidez’s Portfolio</h1>
+          <h2>Fullstack Engineering</h2><h2>DevOps enthusiast</h2><h2>IT Specialist</h2>
+        </div>        
+      </div>
+    </div>
     <br>
     <section class='intro'>      
       <article id="fewwords">
@@ -53,12 +60,12 @@
       <article id="description">
         <h3>About</h3>
         <hr>
-        <p>I'm an IT professional from Argentina who counts with 10+ years of experience working for global companies, supporting and managing big and complex infrastructures. <br> I'm currently the IT Operations Manager for Wellness Services, a Prudential company. Also a student in Universidad de Palermo, where I'm getting a Bachelor's Degree in IT & Business Administration.
-          <br> You'll see me hooked on the video games industry, mind-blowing Movies & TV Shows (specially sci-fi!), Esports, disrupting technologies (e.g., cloud, crypto, blockchain) and digital transformation. 
-         <br> Aspiring drone pilot, native spanish and EFSET's C2 proficient in English—but I know some portuguese too!</p>
+        <p>I'm an IT professional from Argentina who counts with 10+ years of experience working for global companies, supporting and managing big and complex infrastructures.<br>
+          During my Bachelor's Degree in IT & Business Administration, I found myself in love with coding. I've started a thorough career path in codecademy where I'm being taught the wizardly arts of Fullstack Engineering.<br>
+          This is the result, for now...
       </article>
     </section>
-    <section id='projects'>
+    <section class='group projects'>
       <h2>Projects</h2>
       <div class="container">
         <div class="item">
@@ -67,29 +74,16 @@
             <h3>Placeholder 1</h3>
             <p>This is the description for my first project to be hosted on GitHub</p>
           </div>          
-        </div>         
-        <div class="item">
-          <img src="./rsc/img/ba_landspace.JPG" width="300px" height="auto" class="project-img">
-          <div class="description">
-            <h3>Placeholder 2</h3>
-            <p>This is the description for my first project to be hosted on GitHub</p>
-          </div>
-        </div>  
-        <div class="item">
-          <img src="./rsc/img/ba_landspace.JPG" width="300px" height="auto" class="project-img">
-          <div class="description">
-            <h3>Placeholder 3</h3>
-            <p>This is the description for my first project to be hosted on GitHub</p>
-          </div>
-        </div> 
+        </div>                 
       </div>      
     </section>
+    
     <section id='resume'>
       <form method="get" action="./rsc/docs/Federico Benavidez — Resume (2023).pdf" target="_blank">
-        <button type="submit">Updated Resume</button>
+        <button type="submit">Download Resume</button>
      </form>
     </section>
-    <section id='hobbies'>
+    <section class='group hobbies'>
       <h2>Hobbies</h2>
       <div class="container">
         <div class="item">
@@ -116,7 +110,7 @@
       </div>
     </section>
   </main>
-  
+
   <footer>
     <div class="content">
       <div id="copyright">
