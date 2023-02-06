@@ -7,9 +7,8 @@ body {
     width: 100%;
     font-size: 16px;
     position: relative;  
-    /* background-color: #ededed; */
     background-color: #212121;
-    min-width: 400px;    
+    min-width: 300px;    
 }
 
 h1 {
@@ -37,6 +36,11 @@ h3 {
 p {
   font-size: 0.875rem;
   font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 aside, aside p {
@@ -83,12 +87,12 @@ nav .desktop {
   display: flex;
 }
 
-nav.desktop ul {
+nav.desktop ul, .connect ul {
   display: flex;
   flex: 1;
-  align-items: center;
-  padding-inline-start: 0;
+  align-items: center;  
   list-style: none;
+  justify-content: space-around;
 }
 
 .mobile {
@@ -201,7 +205,7 @@ article p {
   color: gray;
 }
 
-.overlay:before{
+.overlay::before{
    content:' ';
    display: block;
    position: absolute;
@@ -245,7 +249,6 @@ article p {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;  
-  border-radius: 5px;
 }
 
 .intro * {
