@@ -87,7 +87,7 @@ nav .desktop {
   display: flex;
 }
 
-nav.desktop ul, .connect ul {
+nav.desktop ul, #connect ul {
   display: flex;
   flex: 1;
   align-items: center;  
