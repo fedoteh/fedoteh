@@ -269,7 +269,8 @@ article p {
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;  
-  padding: 10px 0;
+  padding: 10px 0;  
+  overflow: hidden;
 }
 
 .item {
@@ -309,10 +310,11 @@ article p {
 .item video{
   display: none;
   width: 100%;
+  
 }
 
 .item:hover video{
-  display: inline;
+  display: block;
   z-index: 5;
 }
 
