@@ -284,6 +284,9 @@ article p {
   align-items: center;
   overflow: hidden;  
   box-sizing: border-box;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.45);  
+  border: solid 1px black; 
+  
 }
 
 
