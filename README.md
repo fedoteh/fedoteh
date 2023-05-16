@@ -4,4 +4,4 @@ This is my static portfolio site deployed via GitHub Pages. It will be used to p
 
 Feel free to reach out for business inquiries or professional curiosity at [fedebenavidez@live.com](mailto:fedebenavidez@live.com).
 
-You can navigate this site at [fedebenavidez.com.ar](fedebenavidez.com.ar)
+You can navigate this site at fedebenavidez.com.ar
