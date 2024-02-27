@@ -1,0 +1,401 @@
+/* Global Style */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    position: relative;  
+    background-color: #0d1117;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: 'Roboto Slab';
+  margin: 0;  
+  color: white;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-family: 'Roboto Slab';;
+  margin: 0;
+  color: white;
+  text-align: left;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-family: 'Roboto Slab';
+  /* margin-block-end: 2em; */
+}
+
+p, ul {
+  font-size: 0.875rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+aside, aside p {
+  font-family: 'Spectral';
+  font-style: italic;
+  font-size: 0.9375rem;
+}
+
+/* Header Section */
+
+header {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 60px;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: #f0f8ff;
+  transition: top 0.3s;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: .5rem 3%;
+  justify-content: space-between;
+  width: 65%;
+}
+
+#hoverlogo {
+  display: none;
+}
+
+.top-logo:hover #hoverlogo {
+  display: inline;
+  z-index: 10;
+}
+
+.top-logo:hover #logo {
+  display: none;
+}
+
+nav .desktop {
+  display: flex;
+}
+
+nav.desktop ul, #connect ul {
+  display: flex;
+  flex: 1;
+  align-items: center;  
+  list-style: none;
+  justify-content: space-around;
+}
+
+.mobile {
+  display: none;
+}
+
+nav.desktop a {
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  text-decoration: none;
+  height: 100%;  
+}
+
+nav.desktop a:hover {
+  color: black;
+}
+
+
+.desktop li {
+  padding-left: 0.755rem;
+  color: rgb(0, 0, 0);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  height: 100%;  
+}
+
+@media only screen and (max-width: 800px) {
+  nav.desktop { 
+    display: none;
+  }
+
+  nav.mobile {
+    display: flex;  
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .logo h2 {
+    display: none;   
+  }
+  
+  nav.mobile {
+    padding: 0;
+  }
+}
+
+/* Main Section*/
+
+main {  
+  position: relative;  
+  top: 60px;
+  width: 65%;
+  margin: auto;
+  margin-bottom: 60px;
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+  border-color: #1c1c1c;
+}
+
+section {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;  
+  padding: 1.2rem 1.2rem;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section ul {
+  padding: 0 1rem;
+  line-height: 1.75rem;
+}
+
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  height: 200px;
+}
+
+.overlay h1, h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay h2{
+  color: lightgray;
+  font-size: 1.10rem;
+  display: inline;  
+}
+
+.overlay h2+h2::before {
+  content: " | ";
+  color: gray;
+}
+
+.overlay::before{
+   content:' ';
+   display: block;
+   position: absolute;
+   background: linear-gradient(0deg, #000000 20%, #00000010 100%);
+   width:100%;
+   height:100%;
+   z-index:1;
+   left: 0;
+   top: 0;
+}
+
+.banner {
+  display: flex;
+  position: relative;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url('../img/code.png');
+  background-position: top left;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.text-wrapper {
+  align-self: flex-end;
+  padding: 0 0 5% 5%;
+}
+
+.intro article { 
+  width: 90%;
+  padding: 15px;
+  border-radius: 8px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 5px;
+}
+
+/* .intro { 
+  background-image: url('../img/ba_landspace_2.JPG');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;  
+} */
+
+.intro * {
+  flex: 1; 
+  min-width: 245px;
+}
+
+.group {  
+  color: white;
+  display: block;
+}
+
+.container {      /* REMEMBER TO REVIEW!*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;  
+  padding: 10px 0;  
+  overflow: hidden;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  width: 720px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;  
+  box-sizing: border-box;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.45);  
+  border: solid 1px black; 
+  
+}
+
+
+.description {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #000000;
+  text-align: end;
+  z-index: 10;
+  padding: 1% 2% 2%;  
+  background-color: rgba(0, 0, 0, 0.5);  
+}
+
+/* Videos */
+
+.item img{
+  display: relative;
+  width: 100%;
+}
+
+.item video{
+  display: none;
+  width: 100%;
+  
+}
+
+.item:hover video{
+  display: block;
+  z-index: 5;
+}
+
+.item:hover img{
+  display: none;
+  
+}
+
+/* Resume */
+
+button {  
+  height: 50px; 
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 6px;
+  color: #ffffff;
+  background-color: rgb(0, 66, 126);
+  border-color: #1b1f2326;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px 0px inset;
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition-property: color;
+}
+
+button:hover {
+      background-color: rgb(0, 93, 181);
+      border-color: #1b1f2326;
+      transition-duration: 0.1s;
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  section {
+    flex-wrap: wrap;
+  } 
+
+  .intro {
+    min-width: 300px;
+  } 
+}
+
+/* Footer Section */
+
+footer {
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  background-color: #202124;
+  color: white;
+  align-items:center;
+  border-top: solid 2px; 
+  border-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%) 1;
+}
+
+footer span  {
+  font-family: Spectral;
+  color: lightgray;
+  cursor: default;
+  user-select: none;
+}
+
+footer #author::after {
+  content: ' |';
+  color: gray;
+}
+
+/* Easter egg section*/
+footer #hellofriend {
+  display: none;
+}
+
+#easter-egg:hover #hellofriend {
+  display: inline;
+  z-index: 10;
+  text-decoration: none;
+  color: white;
+}
+
+#easter-egg:hover #fsociety {
+  display: none;
+}
